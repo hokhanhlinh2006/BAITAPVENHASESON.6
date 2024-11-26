@@ -1,20 +1,18 @@
 #include <stdio.h>
+#include <string.h>
 
 int main() {
-    int number[5];
-    int sum = 0;
-    
-    printf("Ban hay nhap vao 5 so nguyen:\n");
-    for (int i = 0; i < 5; i++) {
-        printf("So thu %d: ", i + 1);
-        scanf("%d", &number[i]);
+    char password[] = "666888";
+    char input[20];
+   
+    printf("Ban hay nhap mat khau: ");
+    scanf("%s", input);
+
+    if (strcmp(password, input) == 0) {
+        printf("Da dang nhap thanh cong!\n");
+    } else {
+        printf("Ban nhap sai roi.Hay thu lai.\n");
     }
-    
-    for (int i = 0; i < 5; i++) {
-        if (number[i] % 2 != 0) {
-            sum += number[i];
-        }
-    }
-    printf("Tong cua cac so le trong do la : %d\n", sum);
     return 0;
 }
+
